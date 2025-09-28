@@ -628,11 +628,13 @@
   <section class="hero-section relative text-center py-20 text-white overflow-hidden">
     <!-- Imagen de fondo -->
     <div class="absolute inset-0 bg-cover z-0" 
-        style="background-image: ('img/cotopaxi/cotopaxiportada2.WEBP');
+        style="background-image: url('img/cotopaxi/cotopaxiportada2.WEBP');
                background-position: center 10%;">
     </div>
     <!-- Overlay negro con transparencia (sombra) -->
- 
+    <div class="absolute inset-0 z-10 pointer-events-none" 
+      style="background: linear-gradient(to right, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 100%);">
+    </div>
     <!-- Contenido -->
     <div class="relative z-20">
       <h1 class=" titulo text-6xl font-bold mb-6">Tour Cotopaxi</h1>
@@ -1621,5 +1623,4 @@ window.onload = () => {
     });
   </script>
 </body>
-
 </html>
