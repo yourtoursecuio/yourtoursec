@@ -256,6 +256,81 @@
         height: 500px;
       }
     }
+
+    /* Custom styles for reservation instructions */
+    .reservation-steps {
+      counter-reset: step-counter;
+    }
+    .reservation-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding: 12px 0;
+    }
+    .step-number {
+      counter-increment: step-counter;
+      width: 28px;
+      height: 28px;
+      background-color: #1d3979;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .step-content {
+      flex: 1;
+    }
+    .step-title {
+      font-weight: 600;
+      color: #1d3979;
+      margin-bottom: 4px;
+    }
+    .highlight-text {
+      color: #1d3979;
+      font-weight: 600;
+    }
+    .payment-method {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 4px 0;
+    }
+    .bank-info {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 12px;
+      margin: 8px 0;
+    }
+    .bank-header {
+      font-weight: 600;
+      color: #1d3979;
+      margin-bottom: 8px;
+    }
+    .confirmation-text {
+      background-color: #f0fdf4;
+      border: 1px solid #dcfce7;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+      text-align: center;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .icon svg {
+      width: 100%;
+      height: 100%;
+    }
   </style>
 </head>
 <body class="font-poppins bg-gray-50">
@@ -290,31 +365,271 @@
     </a>
   </div>
 
-<!-- Hero -->
-<section class="hero-section text-center py-20 bg-gradient-to-r from-[#1d3979] to-[#2c5bae] text-white">
-  <div class="max-w-3xl mx-auto px-4">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">Tu Reserva Segura</h1>
-    <p class="text-lg mb-8">Verifica en tu navegador que estás en YourToursEC.</p>
-    
-    <!-- Trust indicator: Verifica que estás en YourToursEC -->
-    <div class="bg-white rounded-xl shadow-md p-4 flex items-center gap-3 mb-6 w-full max-w-md mx-auto">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-green-500 flex-shrink-0">
-        <path d="M14 17V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2m-6-8h.01"></path>
-      </svg>
-      <span class="text-sm text-gray-700 truncate">https://yourtoursec.com/reservas</span>
+  <!-- Hero -->
+  <section class="hero-section text-center py-20 bg-gradient-to-r from-[#1d3979] to-[#2c5bae] text-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Tu Reserva Segura</h1>
+      <p class="text-lg mb-8">Verifica en tu navegador que estás en YourToursEC.</p>
+      
+      <!-- Trust indicator: Verifica que estás en YourToursEC -->
+      <div class="bg-white rounded-xl shadow-md p-4 flex items-center gap-3 mb-6 w-full max-w-md mx-auto">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-green-500 flex-shrink-0">
+          <path d="M14 17V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2m-6-8h.01"></path>
+        </svg>
+        <span class="text-sm text-gray-700 truncate">https://yourtoursec.com/reservas</span>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Main Content -->
   <section id="seccion-reserva" class="py-12">
     <div class="max-w-6xl mx-auto px-4">
+      <!-- Flex container: En pantallas grandes, izquierda = reserva, derecha = proceso alternativo -->
       <div class="flex flex-col lg:flex-row gap-8">
-        <!-- Left: Instrucciones -->
+        
+        <!-- Left: Reserva tu experiencia -->
         <div class="lg:w-1/2">
           <div class="text-center mb-8">
-            <h2 class="text-2xl font-bold text-[#1d3979] mb-3">¿Cómo reservar?</h2>
+            <h2 class="text-2xl font-bold text-[#1d3979] mb-3 flex items-center justify-center gap-3">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </span>
+              ¡Reserva tu experiencia!
+            </h2>
             <p class="text-gray-600">Sigue estos sencillos pasos para asegurar tu viaje</p>
+          </div>
+
+          <div class="bg-white rounded-xl shadow-md p-6 reservation-steps">
+            <div class="reservation-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <div class="step-title flex items-center gap-3">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <line x1="16" y1="13" x2="8" y2="13"></line>
+                      <line x1="16" y1="17" x2="8" y2="17"></line>
+                      <polyline points="10 9 9 9 8 9"></polyline>
+                    </svg>
+                  </span>
+                  Completa tus datos
+                </div>
+                <p>En este formulario para el seguro vial y las entradas a los lugares de visita:</p>
+                <a href="https://forms.gle/h9GuT8UVEtCcUhuf7" target="_blank" class="text-blue-600 hover:text-blue-800 underline font-medium">Formulario: https://forms.gle/h9GuT8UVEtCcUhuf7</a>
+              </div>
+            </div>
+
+            <div class="reservation-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <div class="step-title flex items-center gap-3">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="6" width="20" height="14" rx="2" ry="2"></rect>
+                      <path d="M12 12h.01"></path>
+                      <path d="M17 9v.01"></path>
+                      <path d="M7 9v.01"></path>
+                      <path d="M12 16h.01"></path>
+                    </svg>
+                  </span>
+                  Realiza el abono
+                </div>
+                <p>Haz un <span class="highlight-text">abono de $50 por persona</span> (el saldo lo puedes pagar el día del tour).</p>
+              </div>
+            </div>
+
+            <div class="reservation-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <div class="step-title flex items-center gap-3">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                      <line x1="2" y1="10" x2="22" y2="10"></line>
+                    </svg>
+                  </span>
+                  Formas de pago
+                </div>
+                <div class="payment-method">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                      <line x1="2" y1="10" x2="22" y2="10"></line>
+                      <line x1="8" y1="14" x2="8" y2="14"></line>
+                      <line x1="12" y1="14" x2="12" y2="14"></line>
+                      <line x1="16" y1="14" x2="16" y2="14"></line>
+                    </svg>
+                  </span>
+                  Efectivo en nuestras oficinas
+                </div>
+                <div class="payment-method">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M8 12h8"></path>
+                      <path d="M12 8v8"></path>
+                    </svg>
+                  </span>
+                  Transferencia o depósito
+                </div>
+                <div class="payment-method">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="4" width="20" height="16" rx="2" ry="2"></rect>
+                      <line x1="2" y1="10" x2="22" y2="10"></line>
+                    </svg>
+                  </span>
+                  Tarjeta de crédito (Link de pagos + 7% 😉)
+                </div>
+              </div>
+            </div>
+
+            <div class="reservation-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <div class="step-title flex items-center gap-3">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                      <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                      <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                  </span>
+                  Datos para transferencias
+                </div>
+                
+                <div class="bank-info">
+                  <div class="bank-header flex items-center gap-3">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                      </svg>
+                    </span>
+                    Titular: YOUR TOURS SAS BIC
+                  </div>
+                  <p class="flex items-center gap-3">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                      </svg>
+                    </span>
+                    Ruc: 1793200931001
+                  </p>
+                  <p class="flex items-center gap-3">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M8 12h8"></path>
+                        <path d="M12 8v8"></path>
+                      </svg>
+                    </span>
+                    Banco Produbanco – CUENTA CORRIENTE
+                  </p>
+                  <p class="font-mono font-bold">27059103995</p>
+                </div>
+
+                <div class="bank-info">
+                  <div class="bank-header flex items-center gap-3">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                      </svg>
+                    </span>
+                    Titular: Luis Álvarez
+                  </div>
+                  <p class="flex items-center gap-3">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                        <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                        <line x1="6" y1="1" x2="6" y2="4"></line>
+                        <line x1="10" y1="1" x2="10" y2="4"></line>
+                        <line x1="14" y1="1" x2="14" y2="4"></line>
+                      </svg>
+                    </span>
+                    CI: 0502877616
+                  </p>
+                  <p class="flex items-center gap-3">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                      </svg>
+                    </span>
+                    Correo: youre_tours@outlook.com
+                  </p>
+                  <p class="flex items-center gap-3">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M8 12h8"></path>
+                        <path d="M12 8v8"></path>
+                      </svg>
+                    </span>
+                    Banco Pichincha – Cta. Ahorros <span class="font-mono font-bold">2207273617</span>
+                  </p>
+                  <p class="flex items-center gap-3">
+                    <span class="icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M8 12h8"></path>
+                        <path d="M12 8v8"></path>
+                      </svg>
+                    </span>
+                    Banco Guayaquil – Cta. Ahorros <span class="font-mono font-bold">0012771415</span>
+                  </p>
+                </div>
+
+                <p class="mt-4 flex items-center gap-3">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                  </span>
+                  Una vez realizado el pago, envía el comprobante para confirmar tu reserva.
+                </p>
+              </div>
+            </div>
+
+            <div class="confirmation-text flex items-center justify-center gap-3">
+              <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span class="highlight-text">¡Listo! Tu reserva quedaría confirmada</span>
+            </div>
+          </div>
+
+          <!-- Support -->
+          <div class="mt-8 text-center p-5 bg-blue-50 rounded-xl border border-blue-100">
+            <p class="font-medium text-blue-800 mb-2">¿Necesitas ayuda?</p>
+            <p class="text-blue-700 text-sm mb-3">Nuestro equipo está listo para asistirte</p>
+            <a href="https://wa.me/593995225646" target="_blank" class="whatsapp-btn inline-flex items-center justify-center gap-2 px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition transform">
+              <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Proceso alternativo -->
+        <div class="lg:w-1/2">
+          <div class="text-center my-6">
+            <h3 class="text-lg font-semibold text-[#1d3979]">O sigue este proceso alternativo mediante tarjeta:</h3>
           </div>
 
           <div class="bg-white rounded-xl shadow-md p-6">
@@ -358,19 +673,7 @@
             </div>
           </div>
 
-          <!-- Support -->
-          <div class="mt-8 text-center p-5 bg-blue-50 rounded-xl border border-blue-100">
-            <p class="font-medium text-blue-800 mb-2">¿Necesitas ayuda?</p>
-            <p class="text-blue-700 text-sm mb-3">Nuestro equipo está listo para asistirte</p>
-            <a href="https://wa.me/593995225646" target="_blank" class="whatsapp-btn inline-flex items-center justify-center gap-2 px-4 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition transform">
-              <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
-            </a>
-          </div>
-        </div>
-
-        <!-- Right: Formulario (iframe) -->
-        <div class="lg:w-1/2">
-          <div class="iframe-container">
+          <div class="iframe-container mt-6">
             <div class="iframe-skeleton"></div>
             <iframe
               src="reserva.html"
@@ -419,9 +722,16 @@
           step.classList.add('visible');
         }, 300 * index);
       });
+
+      // Asegurarse de que todos los elementos sean visibles
+      setTimeout(() => {
+        const allElements = document.querySelectorAll('.reservation-step, .confirmation-text');
+        allElements.forEach(el => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        });
+      }, 100);
     });
   </script>
 </body>
-
 </html>
-
