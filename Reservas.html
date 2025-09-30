@@ -695,199 +695,190 @@
           </div>
         </div>
 
-        <!-- Right: Proceso alternativo -->
-        <div class="lg:w-1/2">
-          <div class="text-center my-6">
-            <h3 class="text-lg font-semibold text-[#1d3979]">O sigue este proceso alternativo mediante tarjeta:</h3>
-          </div>
 
-          
 
-          <div class="bg-white rounded-xl shadow-md p-6">
-            <div class="space-y-5">
-              <div class="step-item">
-                <div class="flex items-start gap-4">
-                  <div class="w-8 h-8 rounded-full bg-[#1d3979] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
-                  <div>
-                    <strong class="text-[#1d3979]">Selecciona tu destino</strong>
-                    <p class="text-gray-600 text-sm mt-1">Elige región, tour y fecha disponible.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="step-item">
-                <div class="flex items-start gap-4">
-                  <div class="w-8 h-8 rounded-full bg-[#1d3979] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
-                  <div>
-                    <strong class="text-[#1d3979]">Personaliza tu viaje</strong>
-                    <p class="text-gray-600 text-sm mt-1">Indica número de personas y servicios adicionales.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="step-item">
-                <div class="flex items-start gap-4">
-                  <div class="w-8 h-8 rounded-full bg-[#1d3979] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
-                  <div>
-                    <strong class="text-[#1d3979]">Pago seguro</strong>
-                    <p class="text-gray-600 text-sm mt-1">Confirma con tarjeta o transferencia (cifrado SSL).</p>
-                  </div>
-                </div>
-              </div>
-              <div class="step-item">
-                <div class="flex items-start gap-4">
-                  <div class="w-8 h-8 rounded-full bg-[#1d3979] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
-                  <div>
-                    <strong class="text-[#1d3979]">Recibe tu confirmación</strong>
-                    <p class="text-gray-600 text-sm mt-1">Obtén tu voucher por correo al instante.</p>
-                  </div>
-                </div>
-              </div>
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+
+<!-- Right: Proceso alternativo -->
+<div class="lg:w-1/2 space-y-8 px-4">
+  <!-- Título mejorado -->
+  <div class="text-center mb-4">
+    <h3 class="text-xl font-bold text-[#1d3979] tracking-wide">
+      O sigue este proceso alternativo mediante tarjeta
+    </h3>
+    <p class="text-gray-600 text-sm mt-1">Pago seguro con cifrado SSL</p>
+  </div>
+
+  
+  <div class="mx-auto container flex justify-center py-6 px-1">
+    <div class="flex flex-col space-y-8 w-full max-w-xl px-1">
+      
+      <!-- Tarjeta con animación -->
+      <div id="animated-card"
+           class="bg-gradient-to-tl from-gray-900 to-gray-800 text-white p-6 rounded-xl shadow-md 
+                  relative mx-auto w-full max-w-xs sm:max-w-[24rem] aspect-[8/5]
+                  opacity-0 translate-y-6">
+        <div class="h-full flex flex-col justify-between h-full">
+          <!-- Header -->
+          <div class="flex items-start justify-between space-x-4">
+            <div class="text-xl font-semibold tracking-tight">
+              TU PAGO SEGURO 
             </div>
-          </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="mx-auto container flex justify-center py-16 px-4">
-  <div class="flex flex-col space-y-8 w-full max-w-xl px-4"> <!-- max-w-xl está bien para desktop -->
-
-    <!-- Tarjeta ajustada: usa contenedor con aspecto fijo -->
-    <div class="bg-gradient-to-tl from-gray-900 to-gray-800 text-white p-6 rounded-xl shadow-md 
-                relative mx-auto w-full max-w-xs sm:max-w-[24rem] aspect-[8/5]">
-      <!-- 
-        - max-w-xs: limita ancho en móvil
-        - sm:max-w-[24rem]: permite 24rem (w-96) en pantallas >= sm
-        - aspect-[8/5]: mantiene proporción ~ similar a w-96 h-56 → 384x224 → ~8:5
-      -->
-
-      <div class="h-full flex flex-col justify-between h-full">
-        <!-- Header -->
-        <div class="flex items-start justify-between space-x-4">
-          <div class="text-xl font-semibold tracking-tight">
-            TU PAGO SEGURO 
-          </div>
-
-          <div class="inline-flex flex-col items-center justify-center">
-            <svg class="h-8 w-8" width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24"
-                fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- SVG igual al original -->
-              <path d="M2 15V9C2 5.68629 4.68629 3 8 3H16C19.3137 3 22 5.68629 22 9V15C22 18.3137 19.3137 21 16 21H8C4.68629 21 2 18.3137 2 15Z"
-                stroke="currentColor" stroke-width="1.5"></path>
-              <path d="M13 15.5V12.7M15.8571 12.7C16.5714 12.7 18 12.7 18 10.6C18 8.5 16.5714 8.5 15.8571 8.5L13 8.5V12.7M15.8571 12.7C14.7143 12.7 13.4762 12.7 13 12.7M15.8571 12.7L18 15.5"
-                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M11 8.5L8 15.5L5 8.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-
-            <div class="font-semibold text-white">wallet</div>
-          </div>
-        </div>
-
-        <!-- Chip -->
-        <div class="inline-block w-12 h-8 bg-gradient-to-tl from-yellow-200 to-yellow-100 rounded-md shadow-inner overflow-hidden">
-          <div class="relative w-full h-full grid grid-cols-2 gap-1">
-            <div class="absolute border border-gray-900 rounded w-4 h-6 left-4 top-1"></div>
-            <div class="border-b border-r border-gray-900 rounded-br"></div>
-            <div class="border-b border-l border-gray-900 rounded-bl"></div>
-            <div class=""></div>
-            <div class=""></div>
-            <div class="border-t border-r border-gray-900 rounded-tr"></div>
-            <div class="border-t border-l border-gray-900 rounded-tl"></div>
-          </div>
-        </div>
-
-        <!-- Balance -->
-        <div>
-          <div class="text-xs font-semibold tracking-tight">balance</div>
-          <div class="text-2xl font-semibold">$xxx</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Notificación (sin cambios, solo aseguramos que no desborde) -->
-    <div class="relative">
-      <div class="absolute right-10 flex space-x-2 items-start bg-white text-gray-900 border-gray-200 shadow-2xl -mt-16 w-72 px-2 py-3 rounded-lg max-w-full">
-        <!-- El resto igual -->
-        <div class="flex-initial">
-          <div class="inline-flex items-center justify-center rounded-lg bg-gradient-tl from-green-400 via-green-400 bg-green-300">
-            <div class="p-2">
-              <svg class="h-4 w-4 text-white opacity-90" width="24" height="24" stroke-width="1.5"
-                  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+            <div class="inline-flex flex-col items-center justify-center">
+              <svg class="h-8 w-8" width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 15V9C2 5.68629 4.68629 3 8 3H16C19.3137 3 22 5.68629 22 9V15C22 18.3137 19.3137 21 16 21H8C4.68629 21 2 18.3137 2 15Z"
+                  stroke="currentColor" stroke-width="1.5"></path>
+                <path d="M13 15.5V12.7M15.8571 12.7C16.5714 12.7 18 12.7 18 10.6C18 8.5 16.5714 8.5 15.8571 8.5L13 8.5V12.7M15.8571 12.7C14.7143 12.7 13.4762 12.7 13 12.7M15.8571 12.7L18 15.5"
                   stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M15 8.5C14.315 7.81501 13.1087 7.33855 12 7.30872M9 15C9.64448 15.8593 10.8428 16.3494 12 16.391M12 7.30872C10.6809 7.27322 9.5 7.86998 9.5 9.50001C9.5 12.5 15 11 15 14C15 15.711 13.5362 16.4462 12 16.391M12 7.30872V5.5M12 16.391V18.5"
-                  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M11 8.5L8 15.5L5 8.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
+              <div class="font-semibold text-white">wallet</div>
             </div>
           </div>
-        </div>
 
-        <div class="flex-1 inline-flex items-start justify-between">
-          <div>
-            <h2 class="text-xs font-semibold tracking-tight">Your Tours EC</h2>
-            <p class="text-xs text-gray-500 font-light">Con el respaldo de Payphone</p>
+          <!-- Chip -->
+          <div class="inline-block w-12 h-8 bg-gradient-to-tl from-yellow-200 to-yellow-100 rounded-md shadow-inner overflow-hidden">
+            <div class="relative w-full h-full grid grid-cols-2 gap-1">
+              <div class="absolute border border-gray-900 rounded w-4 h-6 left-4 top-1"></div>
+              <div class="border-b border-r border-gray-900 rounded-br"></div>
+              <div class="border-b border-l border-gray-900 rounded-bl"></div>
+              <div></div>
+              <div></div>
+              <div class="border-t border-r border-gray-900 rounded-tr"></div>
+              <div class="border-t border-l border-gray-900 rounded-tl"></div>
+            </div>
           </div>
-          <div class="text-xs text-gray-400">17:15</div>
+
+          <!-- Balance -->
+          <div>
+            <div class="text-xs font-semibold tracking-tight">balance</div>
+            <div class="text-2xl font-semibold">$xxx</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notificación con animación -->
+      <div id="animated-notification" class="relative opacity-0 translate-y-6">
+        <div class="absolute right-10 flex space-x-2 items-start bg-white text-gray-900 border-gray-200 shadow-2xl -mt-16 w-72 px-2 py-3 rounded-lg max-w-full">
+          <div class="flex-initial">
+            <div class="inline-flex items-center justify-center rounded-lg bg-green-300">
+              <div class="p-2">
+                <svg class="h-4 w-4 text-white opacity-90" width="24" height="24" stroke-width="1.5"
+                    viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M15 8.5C14.315 7.81501 13.1087 7.33855 12 7.30872M9 15C9.64448 15.8593 10.8428 16.3494 12 16.391M12 7.30872C10.6809 7.27322 9.5 7.86998 9.5 9.50001C9.5 12.5 15 11 15 14C15 15.711 13.5362 16.4462 12 16.391M12 7.30872V5.5M12 16.391V18.5"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 inline-flex items-start justify-between">
+            <div>
+              <h2 class="text-xs font-semibold tracking-tight">Your Tours EC</h2>
+              <p class="text-xs text-gray-500 font-light">Con el respaldo de Payphone</p>
+            </div>
+            <div class="text-xs text-gray-400">17:15</div>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+
+
+
+
+
+  
+  <!-- Pasos -->
+  <div class="bg-white rounded-xl shadow-md p-6">
+    <div class="space-y-5">
+      <div class="step-item">
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-[#1d3979] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">1</div>
+          <div>
+            <strong class="text-[#1d3979]">Selecciona tu destino</strong>
+            <p class="text-gray-600 text-sm mt-1">Elige región, tour y fecha disponible.</p>
+          </div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-[#1d3979] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">2</div>
+          <div>
+            <strong class="text-[#1d3979]">Personaliza tu viaje</strong>
+            <p class="text-gray-600 text-sm mt-1">Indica número de personas y servicios adicionales.</p>
+          </div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-[#1d3979] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">3</div>
+          <div>
+            <strong class="text-[#1d3979]">Pago seguro</strong>
+            <p class="text-gray-600 text-sm mt-1">Confirma con tarjeta o transferencia (cifrado SSL).</p>
+          </div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="flex items-start gap-4">
+          <div class="w-8 h-8 rounded-full bg-[#1d3979] text-white flex items-center justify-center font-bold text-sm flex-shrink-0">4</div>
+          <div>
+            <strong class="text-[#1d3979]">Recibe tu confirmación</strong>
+            <p class="text-gray-600 text-sm mt-1">Obtén tu voucher por correo al instante.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Iframe -->
+  <div class="iframe-container mt-6 rounded-xl overflow-hidden shadow-lg">
+    <div class="iframe-skeleton"></div>
+    <iframe
+      src="reserva.html"
+      title="Formulario de reserva segura"
+      width="100%"
+      height="600"
+      frameborder="0"
+      class="border-none"
+      onload="this.parentElement.classList.add('loaded')"
+    ></iframe>
   </div>
 </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div class="iframe-container mt-6">
-            <div class="iframe-skeleton"></div>
-            <iframe
-              src="reserva.html"
-              title="Formulario de reserva segura"
-              width="100%"
-              height="100%"
-              frameborder="0"
-              class="border-none"
-              onload="this.parentElement.classList.add('loaded')"
-            ></iframe>
-          </div>
-        </div>
+        
       </div>
     </div>
   </section>
@@ -898,39 +889,66 @@
   </footer>
 
   <!-- Script -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const closeBtn = document.getElementById('closeBtn');
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const closeBtn = document.getElementById('closeBtn');
 
-    if (hamburger && mobileMenu) {
-      hamburger.addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
-      });
-    }
-    if (closeBtn) {
-      closeBtn.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-      });
-    }
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+    });
+  }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      const steps = document.querySelectorAll('.step-item');
-      steps.forEach((step, index) => {
-        setTimeout(() => {
-          step.classList.add('visible');
-        }, 300 * index);
-      });
-
+  // Animaciones al cargar
+  document.addEventListener('DOMContentLoaded', () => {
+    // Animar pasos numerados
+    const steps = document.querySelectorAll('.step-item');
+    steps.forEach((step, index) => {
       setTimeout(() => {
-        document.querySelectorAll('.reservation-step, .confirmation-text').forEach(el => {
+        step.classList.add('visible');
+      }, 300 * index);
+    });
+
+    // Animar otros elementos del proceso manual
+    setTimeout(() => {
+      document.querySelectorAll('.reservation-step, .confirmation-text').forEach(el => {
+        if (el) {
           el.style.opacity = '1';
           el.style.transform = 'translateY(0)';
-        });
-      }, 100);
-    });
-  </script>
+          el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        }
+      });
+    }, 100);
+
+    // Animar tarjeta
+    const card = document.getElementById('animated-card');
+    setTimeout(() => {
+      if (card) {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      }
+    }, 400);
+
+    // Animar notificación
+    const notification = document.getElementById('animated-notification');
+    setTimeout(() => {
+      if (notification) {
+        notification.style.opacity = '1';
+        notification.style.transform = 'translateY(0)';
+        notification.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      }
+    }, 700);
+  });
+</script>
 </body>
 </html>
+
 
 
