@@ -98,7 +98,12 @@
   <h1>TURISMO DE CALIDAD</h1>
   <p>En nuestro compromiso por brindar un servicio de calidad, nos esforzamos por superar las expectativas de nuestros clientes, ofreciendo atención personalizada, soluciones eficientes y una experiencia satisfactoria en cada viaje.</p>
   <div class="hero-buttons">
-    <a href="https://wa.me/593995225646 " target="_blank" class="btn-custom primary">Contáctanos</a>
+    
+    <a href="Reservas.html" target="_blank" class="btn-custom primary">¡Reserva Ahora!
+    </a>
+
+    
+    
   </div>
 </div>
 <div class="top-left">
@@ -203,7 +208,7 @@
 <a href="#seccion-guias" class="carousel-card8">
   <img src="img/nuevo/naturaleza.png" alt="Circuitos de Naturaleza" class="carousel-image8" loading="lazy" decoding="async">
   <h3 class="carousel-heading8">Guianza Personalizada</h3>
-  <p class="carousel-text8">Guías expertos que te acompañarán en tu recorrido, compartiendo conocimientos profundos sobre la cultura, historia y naturaleza de Ecuador.</p>
+  <p class="carousel-text8">Guías expertos que te acompañarán en tu recorrido, compartiendo conocimientos  sobre la cultura, historia y naturaleza de Ecuador.</p>
 </a>
 
 <!-- Tarjeta 9 -->
@@ -552,7 +557,7 @@
 <div class="card26 large"
   onclick="window.open(' https://api.whatsapp.com/send/?phone=593995225646&text=Hola+%F0%9F%98%8A+Necesito+informaci%C3%B3n+sobre+el+tour+a+Papallacta+%E2%98%98%EF%B8%8F&type=phone_number&app_absent=0', '_blank')"
   style="cursor: pointer;">
-  <img src="img/papallacta.webp"
+  <img src="img/papallacta.jpg"
        alt="PAPALLACTA - Aguas termales y paisaje andino"
        width="310"
        height="400"
@@ -568,7 +573,7 @@
 <div class="card26 large"
   onclick="window.open(' https://api.whatsapp.com/send/?phone=593995225646&text=Hola+%F0%9F%98%8A+Necesito+informaci%C3%B3n+sobre+el+tour+a+B%C3%A1%C3%B1os+de+Agua+Santa+%F0%9F%92%A7&type=phone_number&app_absent=0', '_blank')"
   style="cursor: pointer;">
-  <img src="img/img/sec paquetes/animal Park.webp"
+  <img src="img/baños.webp"
        alt="BAÑOS DE AGUA SANTA - Cascadas y aventura en los Andes"
        width="310"
        height="400"
@@ -641,9 +646,9 @@
 <section id="seccion-serviciosimagenes" class="bg-white py-12 ">
   <div class="max-w-6xl mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold text-gray-800">Galeria de Servicios</h2>
-    <p class="mt-2 text-gray-600">Descubre en imágenes lo que podemos hacer por ti. Innovación, calidad y dedicación en cada detalle.</p>
+    <p class="mt-2 text-gray-600">Una muestra visual de los servicios y experiencias que ofrecemos para ti.</p>
   </div>
-</section>
+
 
 
 <section id="seccion-contenedordeservicios">
@@ -667,7 +672,7 @@
         <p>
           Disfruta de una selección exclusiva de los mejores restaurantes en cada destino, elegidos por su servicio de calidad y experiencia gastronómica. Saborea lo mejor de la cocina local, mientras viajas con nosotros.
         </p>
-        <a href="#" class="btn">Preguntas..?</a>
+        <a href="Reservas.html" class="btn">Preguntas..?</a>
       </div>
       <div class="restaurant-image">
         <div class="parent">
@@ -934,88 +939,7 @@
 }
   </style>
 
-  <!-- Script para navegación con flechas -->
-  <script>
-    // Mantener estado global (solo si no existe ya)
-    if (typeof window.currentSection === 'undefined') {
-      window.currentSection = 1;
-    }
-
-    // Función mejorada que también actualiza currentSection
-    function showSection(sectionNumber) {
-      if (sectionNumber < 1 || sectionNumber > 3) return;
-      
-      document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
-      document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === sectionNumber - 1));
-      
-      const target = document.getElementById(`seccion${sectionNumber}`);
-      if (target) target.classList.add('active');
-      
-      window.currentSection = sectionNumber;
-    }
-
-    // Nuevas funciones para flechas
-    function showNextSection() {
-  const current = document.querySelector('.nav-dots .dot.active');
-  const dots = document.querySelectorAll('.nav-dots .dot');
-  const currentIndex = Array.from(dots).indexOf(current);
-  const nextIndex = (currentIndex + 1) % dots.length; // Vuelve a 0 si está en el último
-  showSection(nextIndex + 1); // Sección empieza en 1
-}
-
-function showPreviousSection() {
-  const current = document.querySelector('.nav-dots .dot.active');
-  const dots = document.querySelectorAll('.nav-dots .dot');
-  const currentIndex = Array.from(dots).indexOf(current);
-  const prevIndex = (currentIndex - 1 + dots.length) % dots.length; // Vuelve al último si está en el primero
-  showSection(prevIndex + 1);
-}
-
-    // Asegurar que openGallery y closeModal existan (solo si no están)
-    if (typeof window.openGallery !== 'function') {
-      const images = [
-        "img/3restaurantes/3alerosresturante.webp",
-        "img/3restaurantes/2ingapircadesayuno.webp",
-        "img/3restaurantes/1cajasmesa.webp",
-        "img/3restaurantes/4bibliamrestaurante.webp",
-        "img/4transporte/1transporteasientos.webp",
-        "img/4transporte/2buspanorama.webp",
-        "img/4transporte/3asientosbus22.webp",
-        "img/4transporte/5busqpequeño2.webp",
-        "img/5hoteles/1camaaleros2.webp",
-        "img/5hoteles/2casagiralda.webp",
-        "img/5hoteles/3hotelparis.webp",
-        "img/5hoteles/4hotelpasiflora.webp"
-      ];
-      window.openGallery = function(index) {
-        document.getElementById("modalImg").src = images[index];
-        document.getElementById("imageModal").style.display = "flex";
-      };
-      window.closeModal = function() {
-        document.getElementById("imageModal").style.display = "none";
-      };
-    }
-
-
-    // Añadir interacción a las flechas en móviles
-document.addEventListener('DOMContentLoaded', function() {
-  const navDots = document.querySelector('.nav-dots');
-  if (navDots) {
-    navDots.addEventListener('click', function(e) {
-      if (e.target === navDots) {
-        const rect = navDots.getBoundingClientRect();
-        const clickX = e.clientX;
-        const centerX = rect.left + rect.width / 2;
-        if (clickX < centerX) {
-          showPreviousSection();
-        } else {
-          showNextSection();
-        }
-      }
-    });
-  }
-});
-  </script>
+</section>
 </section>
 
 
@@ -2881,8 +2805,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-
-<script>// Menú móvil
+<script>
+// ==================== MENÚ MÓVIL ====================
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobileMenu");
 const closeBtn = document.querySelector(".mobile-menu .close-btn");
@@ -2898,7 +2822,7 @@ if (hamburger && mobileMenu) {
   });
 }
 
-// Carrusel principal (Hero)
+// ==================== CARRUSEL HERO (automático) ====================
 let heroCarouselIndex = 0;
 const heroCarouselItems = document.querySelectorAll('.carousel-item');
 const heroCarouselTotalItems = heroCarouselItems.length;
@@ -2924,8 +2848,8 @@ setInterval(() => {
   showHeroCarouselItem(heroCarouselIndex);
 }, 5000);
 
-// Carrusel responsive (cards) - con reinicio automático al final
-let currentIndex = 0;
+// ==================== CARRUSEL RESPONSIVE (cards) ====================
+let carouselIndex = 0; // Cambiado a carouselIndex para no confundir con otros índices
 const items = document.querySelectorAll('#carousel-inner .carousel-card8');
 const container = document.querySelector('#carousel-inner');
 
@@ -2935,27 +2859,25 @@ function getItemsPerView() {
 
 function updateCarousel() {
   const itemsPerView = getItemsPerView();
-  const offset = -currentIndex * (100 / itemsPerView);
+  const offset = -carouselIndex * (100 / itemsPerView);
   container.style.transform = `translateX(${offset}%)`;
 }
 
 function next() {
   const itemsPerView = getItemsPerView();
-  if (currentIndex < items.length - itemsPerView) {
-    currentIndex++;
+  if (carouselIndex < items.length - itemsPerView) {
+    carouselIndex++;
   } else {
-    // Reiniciar al primer elemento
-    currentIndex = 0;
+    carouselIndex = 0; // Reiniciar al inicio
   }
   updateCarousel();
 }
 
 function prev() {
-  if (currentIndex > 0) {
-    currentIndex--;
+  if (carouselIndex > 0) {
+    carouselIndex--;
   } else {
-    // Opcional: ir al final si se presiona prev en el inicio
-    currentIndex = Math.max(0, items.length - getItemsPerView());
+    carouselIndex = Math.max(0, items.length - getItemsPerView());
   }
   updateCarousel();
 }
@@ -2963,22 +2885,16 @@ function prev() {
 window.addEventListener('resize', updateCarousel);
 updateCarousel();
 
-// Event listeners para botones
 document.querySelector('.carousel-control-next')?.addEventListener('click', next);
 document.querySelector('.carousel-control-prev')?.addEventListener('click', prev);
 
-// Galería horizontal scrollable
+// ==================== GALERÍA HORIZONTAL SCROLLABLE ====================
 const gallery = document.getElementById('gallery');
 const leftBtn = document.querySelector('.left6');
 const rightBtn = document.querySelector('.right6');
+let cardWidth = 320;
 
-let cardWidth = 320; // ancho de tarjeta + gap
-
-function getTotalScroll() {
-  return gallery.scrollWidth - gallery.clientWidth;
-}
-
-[rightBtn, leftBtn].forEach(btn => {
+[rightBtn, leftBtn]?.forEach(btn => {
   btn?.addEventListener('click', () => {
     const direction = btn === rightBtn ? 1 : -1;
     const targetScroll = gallery.scrollLeft + direction * cardWidth;
@@ -2986,32 +2902,61 @@ function getTotalScroll() {
   });
 });
 
+// ==================== NAVEGACIÓN POR SECCIONES (Restaurantes, Transporte, Hoteles) ====================
+// Asegurar que currentSection exista
+if (typeof window.currentSection === 'undefined') {
+  window.currentSection = 1;
+}
 
-
-
-
-
-
-
-
-// Navegación por secciones con puntos (dots)
-// Navegación por secciones con puntos (dots)
+// Mostrar sección específica
 function showSection(sectionNumber) {
   if (sectionNumber < 1 || sectionNumber > 3) return;
-  
-  document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
-  document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
-  
-  const sectionToShow = document.getElementById(`seccion${sectionNumber}`);
-  const dotToActivate = document.querySelectorAll('.dot')[sectionNumber - 1];
-  
-  if (sectionToShow) sectionToShow.classList.add('active');
-  if (dotToActivate) dotToActivate.classList.add('active');
-  
-  // ✅ Actualizar el estado global
+
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.dot').forEach((d, i) => d.classList.toggle('active', i === sectionNumber - 1));
+
+  const target = document.getElementById(`seccion${sectionNumber}`);
+  if (target) target.classList.add('active');
+
   window.currentSection = sectionNumber;
 }
-// Galería modal
+
+// Flechas de navegación
+function showNextSection() {
+  showSection((window.currentSection % 3) + 1);
+}
+
+function showPreviousSection() {
+  showSection(window.currentSection <= 1 ? 3 : window.currentSection - 1);
+}
+
+// Click en área de puntos (móvil)
+document.addEventListener('DOMContentLoaded', function () {
+  const navDots = document.querySelector('.nav-dots');
+  if (navDots) {
+    navDots.addEventListener('click', function (e) {
+      if (e.target === navDots) {
+        const rect = navDots.getBoundingClientRect();
+        const clickX = e.clientX;
+        const centerX = rect.left + rect.width / 2;
+        clickX < centerX ? showPreviousSection() : showNextSection();
+      }
+    });
+  }
+});
+
+// Swipe táctil
+let startX = 0;
+document.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+document.addEventListener('touchend', (e) => {
+  const endX = e.changedTouches[0].clientX;
+  const deltaX = endX - startX;
+  if (Math.abs(deltaX) > 50) {
+    deltaX > 0 ? showPreviousSection() : showNextSection();
+  }
+});
+
+// ==================== GALERÍA MODAL DE IMÁGENES ====================
 const images = [
   "img/3restaurantes/3alerosresturante.webp",
   "img/3restaurantes/2ingapircadesayuno.webp",
@@ -3026,6 +2971,7 @@ const images = [
   "img/5hoteles/3hotelparis.webp",
   "img/5hoteles/4hotelpasiflora.webp"
 ];
+
 let galleryCurrentIndex = 0;
 
 function openGallery(index = 0) {
@@ -3053,71 +2999,30 @@ function nextImage() {
 
 function updateThumbnails() {
   const thumbnailNav = document.getElementById("thumbnailNav");
+  if (!thumbnailNav) return;
   thumbnailNav.innerHTML = '';
-  images.forEach((img, i) => {
-    const imgEl = document.createElement('img');
-    imgEl.src = img;
-    imgEl.alt = `Miniatura ${i}`;
-    if (i === galleryCurrentIndex) imgEl.classList.add('active');
-    imgEl.onclick = () => {
-      galleryCurrentIndex = i;
-      document.getElementById("modalImg").src = images[i];
-      updateThumbnails();
-    };
-    thumbnailNav.appendChild(imgEl);
+  images.forEach((src, i) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = `Miniatura ${i + 1}`;
+    if (i === galleryCurrentIndex) img.classList.add('active');
+    img.onclick = () => openGallery(i);
+    thumbnailNav.appendChild(img);
   });
 }
 
-// Eventos para navegación con teclado y click externo
-window.addEventListener('keydown', function (e) {
+// Teclado y clic fuera
+window.addEventListener('keydown', (e) => {
   if (e.key === "Escape") closeModal();
   else if (e.key === "ArrowLeft") prevImage();
   else if (e.key === "ArrowRight") nextImage();
 });
 
-document.getElementById("imageModal")?.addEventListener('click', function (e) {
-  if (e.target === this) closeModal();
+document.getElementById("imageModal")?.addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) closeModal();
 });
 
-// Swipe para navegar entre secciones
-let startX = 0, isDragging = false;
-
-document.addEventListener('mousedown', (e) => { startX = e.clientX; isDragging = true; });
-document.addEventListener('mouseup', () => isDragging = false);
-document.addEventListener('mousemove', (e) => {
-  if (!isDragging) return;
-  const deltaX = e.clientX - startX;
-  const threshold = 50;
-  if (Math.abs(deltaX) > threshold) {
-    navigateSection(deltaX > 0 ? -1 : 1);
-    isDragging = false;
-  }
-});
-
-document.addEventListener('touchstart', (e) => {
-  startX = e.touches[0].clientX;
-}, { passive: true });
-
-document.addEventListener('touchend', (e) => {
-  const endX = e.changedTouches[0].clientX;
-  const deltaX = endX - startX;
-  const threshold = 50;
-  if (Math.abs(deltaX) > threshold) {
-    navigateSection(deltaX > 0 ? -1 : 1);
-  }
-});
-
-function navigateSection(direction) {
-  const dots = document.querySelectorAll('.nav-dots .dot');
-  const activeDot = document.querySelector('.nav-dots .dot.active');
-  let currentIndex = Array.from(dots).indexOf(activeDot);
-  let newIndex = currentIndex + direction;
-  if (newIndex >= 0 && newIndex < dots.length) {
-    showSection(newIndex + 1); // Sección empieza en 1
-  }
-}
-
-// Redirección desde cards
+// ==================== REDIRECCIÓN DESDE CARDS ====================
 document.querySelectorAll('.card26').forEach(card => {
   const href = card.getAttribute('data-href');
   if (href) {
@@ -3125,7 +3030,7 @@ document.querySelectorAll('.card26').forEach(card => {
   }
 });
 
-// Formulario de WhatsApp
+// ==================== FORMULARIO DE WHATSAPP ====================
 document.getElementById("whatsapp-form")?.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -3134,16 +3039,13 @@ document.getElementById("whatsapp-form")?.addEventListener("submit", function (e
   const tipo = document.querySelector("#tipo").value;
   const mensaje = document.querySelector("#mensaje").value.trim();
 
-  const numeroWhatsApp = "593995225646"; // Sin el +
+  const numeroWhatsApp = "593995225646";
   const textoMensaje = `Nombre: ${nombre}%0ATeléfono: ${telefono}%0ATipo: ${tipo}%0AMensaje: ${mensaje}`;
   const urlWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${textoMensaje}`;
 
   window.open(urlWhatsApp, "_blank");
-});</script>
-
-
-
-
+});
+</script>
 
 
 
